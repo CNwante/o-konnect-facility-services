@@ -1,0 +1,183 @@
+
+@media screen and (min-width: 682px) {
+    /*======= Styles For the Header Starts Here ========*/
+
+
+    /*======= General Styling Starts Here ========*/
+    * {
+        --pageWidth: 85%;
+    }
+    
+    .headerContainer {
+        height: 70px;
+    }
+
+    .title {
+        font-size: 25px;
+        font-weight: 200;
+    }
+
+    .btn {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 19px;
+        font-weight: 500;
+    }
+    /*======= General Styling Ends Here ========*/
+
+    .heroContainer {
+        height: 95vh;
+    }
+
+    .menuBox {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logo {
+        position: relative;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .navBox {
+        all: unset;
+    }
+
+    .navBox .navList {
+        opacity: 1;
+        font-size: 14px;
+    }
+
+
+    .navUl {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .nav-scrolled {
+        --text: #000000;
+        --text-inverse: #000000;
+    }
+
+    .mainContainer {
+        transform: translateY(36vh);
+    }
+
+    .mainContent span {
+        font-size: 22px;
+    }
+
+    .mainContent h1 {
+        margin: 0.2em 0;
+        font-family: "Aldrich", sans-serif;
+        font-size: 34px;
+        font-weight: 500;
+    }
+
+    .mainContent p {
+        line-height: 1.5;
+    }
+    /*======= Styles For the Header Ends Here ========*/
+
+    /*--==================================================================
+    Section 2: About Us
+    ======================================================================*/
+    /* .aboutTitle {
+        font-weight: 600;
+    } */
+
+    .aboutText .title,
+    .aboutText p {
+        padding-left: unset;
+        text-align: unset;
+    }
+
+    .aboutFocus {
+        width: var(--pageWidth);
+        margin: 0 auto;
+        /* display: grid;
+        place-items: center; */
+    }
+    
+    /*--==================================================================
+    Section 2: Our Services
+    ======================================================================*/
+    
+    @media screen and (min-width: 740px) {
+        .aboutContent {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .aboutText {
+            width: 360px;
+            border-width: 0 2px 0 0;
+            border-style: solid;
+            border-right-color: #1abea5;
+            margin-left: 0;
+            flex-grow: 2;
+        }
+
+        .slideshow {
+            max-width: unset;
+            width: 360px;
+            margin-left: 0.3em;
+            transition: 1s;
+            flex-grow: 4;
+        }
+
+        .aboutText p {
+            padding-right: 0.8em;
+            line-height: 1.5;
+            /* text-align: justify; */
+        }
+
+    
+        @media screen and (min-width: 980px) {
+            .aboutFocus {
+            width: var(--pageWidth);
+            margin: 0 auto;
+            display: grid;
+            place-items: center;
+            }
+        }
+    }
+
+   /*--==================================================================
+    FOOTER
+    ======================================================================*/ 
+    .footerBox {
+        flex-direction: row;
+    }
+
+    .contactBox {
+        text-align: left;
+    }
+
+    .googleMap iframe {
+        width: 65vw;
+        height: 400px;
+    }
+    
+    .wrapper .button:hover {
+        width: 200px;
+    }
+    
+    /*======================= COPYWRITE ===========================*/
+   .copy {
+       font-size: 22px;
+   }
+}
+
+

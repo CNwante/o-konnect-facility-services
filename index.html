@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O-KONNECT</title>
+    <link rel="stylesheet" href="css/mainStyle.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/mediaQueries.css">
+    <link rel="shortcut icon" href="images/logo.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<!-- <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet" /> -->
+
+<body>
+    <!--===================================================================================
+        Header and Nav Bar markup
+    =======================================================================================-->
+    <div class="heroContainer header" id="home">
+        
+        <header id="myHeader" class="headerContainer">
+            <!--==== Hamburger Icon MarkUP ====-->
+            <div class="hamburger" onclick="menuIcon(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+                
+            <div class="menuBox">
+                <div class="logo">
+                    <img src="images/logo.jpg" alt="LOGO">
+                </div>
+        
+                <nav class="navContainer navBox" id="myLinks">
+                    <ul class="navUl">
+                        <li class="navList"><a href="#home">Home</a></li>
+                        <li class="navList"><a href="#about">About</a></li>
+                        <li class="navList"><a href="#services">Services</a></li>
+                        <li class="navList"><a href="#testimonies">Testimonials</a></li>
+                        <li class="navList"><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="mainContainer">
+            <div class="mainBox">
+                <div class="mainContent">
+                    <span>Welcome to</span>
+                    <h1>O-Konnect Facility Services</h1>
+                    <p>O-Konnect is an indigenous total facilities management 
+                    company offering global standard services to individuals 
+                    and businesses across different sectors of the economy.</p>
+                    <a href="#about" class="btn">More About Us</a>
+                </div>
+            </div>
+        </main>
+       
+    </div>
+
+    <!--======== Wavy Header Animation =========-->
+    <!-- <div class="canvasWrap home-intro">
+        <canvas id="canvas"></canvas>
+    </div> -->
+
+    <!--====================================================================================
+        Section 1: About Us
+    ======================================================================================-->
+    <section class="aboutContainer" id="about">
+        <div class="boxWidth1">
+            <div class="aboutContent">
+                <div class="aboutText">
+                    <h2 class="title">About US</h2>
+
+                    <p>We are one of the most diversified facilities management company 
+                    in Ebonyi State today. O-konnect has the staffing expertise and 
+                    understanding required to meet all your needs in a demanding high 
+                    traffic environment. Here, our pirority is to give you the best services
+                    according to your requirements. We always put our customers first and many
+                    people that have tested us always say that we are trusted! 
+                    </p>
+                </div>
+                <!--============ Image Slider MarkUP Starts Here ============-->
+                <div class="slideshow">
+                    <div class="slide">
+                        <img src="images/main.jpeg">
+                        <div class="imageText">
+                            <h4>Quality Services</h4>
+                            <p>We are ever ready to deliver</p>
+                        </div>
+                    </div>
+            
+                    <div class="slide">
+                        <img src="images/children2.jpeg">
+                        <div class="imageText">
+                            <h4>Home Lesson</h4>
+                            <p>Using a trained expert</p>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/children1.jpeg">
+                        <div class="imageText">
+                            <h4>Quality Staff</h4>
+                            <p>Our teachers are friendly</p>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/nanny-playing.jpg">
+                        <div class="imageText">
+                            <h4>Quality Staff</h4>
+                            <p>Our nannies are friendly</p>
+                        </div>
+                    </div>
+            
+                    <div class="slide">
+                        <img src="images/event1.jpg">
+                        <div class="imageText">
+                            <p>We are the best in event management</p>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/cleaners1.png">
+                        <div class="imageText">
+                            <h4>Post construction cleaning</h4>
+                            <p>Our workers have all it takes</p>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/cleaners2.jpg">
+                        <div class="imageText">
+                            <h4>House cleaning services</h4>
+                            <p>We give you the best</p>
+                        </div>
+                    </div>
+
+                </div>            
+                <!--============ Image Slider MarkUP Ends Here ============-->
+            </div>
+
+            <ul class="aboutFocus">
+                <div>
+                    <h2 class="subTitle"> OUR AREAS OF SPECIAL FOCUS </h2>
+                    <li><span>Home lessons for your children using trained experts</span></li>
+                    <li><span>Nanny services</span></li>
+                    <li><span>Event management for your weddings and birthdays e.t.c</span></li>
+                    <li><span>Post construction management for your building(s)</span></li>
+                    <li><span>Professional house cleaning services</span></li>
+                </div>
+            </ul>           
+        </div>
+    </section>
+
+    <!--==================================================================
+        Section 2: Our Services
+    ======================================================================-->
+
+    <section class="servicesContainer" id="services">
+        <div class="boxWidth2">
+            <div class="servicesContent">
+                <div class="titleBox">
+                    <h2 class="title">Our Services</h2>
+                    <p>Below are details on our area of special focus in our services.</p>
+                </div>
+                <div class="lesson-nannyBox">
+                    <div class="flipCard">
+                        <div class="flipCardInner">
+                            <div class="flipCardFront">
+                                <img src="images/children2.jpeg" alt="">
+                                <h2 class="subTitle">Home Lesson</h2>
+                                <p>With our trained experts, we are sure to deliver right on time!</p>
+                                <a class="btn">READ MORE</a>
+                            </div>
+                            <div class="flipCardBack">
+                                <p>Our home tutor services provides the best 
+                                that your child would need to develop both academically
+                                and morally. Our tutors have good quality soft skills
+                                like <span style="color: #15ffdc">communication, patience, adaptabilty, friendliness, mentoring
+                                and leadership.</span>  Outside these, our tutors are always in constant
+                                research and learning to provide your kids with the most current
+                                knowledge.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flipCard">
+                        <div class="flipCardInner">
+                            <div class="flipCardFront">
+                                <img src="images/nanny.jpg" alt="">
+                                <h2 class="subTitle">Nanny Services</h2>
+                                <p>We understand how important childcare is and we pay
+                                great attention to this...</p>
+                                <a class="btn">READ MORE</a>
+                            </div>
+                            <div class="flipCardBack">
+                                <p>Our nannies have great skills that you can ever imagine
+                                and these includes; genuinely love of childeren company, basic understanding
+                                of child development, patience, adaptabilty, safty concious, nuturing spirit, 
+                                trustworthy, creative and proactive etc. So, our nannies has all it takes to
+                                to give your kids the best childcare. Try us today!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="eventContent">
+                    <div class="flipCard flipEvent">
+                        <div class="flipCardInner">
+                            <div class="flipCardFront">
+                                <img src="images/event2.jpg" alt="">
+                                <h2 class="subTitle">Event Management</h2>
+                                <p>We are here to provide the best in your events.</p>
+                                <a class="btn">READ MORE</a>
+                            </div>
+                            <div class="flipEventBack">
+                                <p>Hello Ebonyians, are you preparing for wedding or you have someone 
+                                who is planning to wed. Please don’t take the risk of travelling to 
+                                Lagos or Porthacourt or any other state to get wedding accessories cheap. 
+                                O-Konnect is here for you. Our products includes: <span style="color: #15ffdc">
+                                Wedding Gowns,
+                                Wedding Cards,
+                                Quality Wedding Rings,
+                                Wedding Flowers,
+                                Bridal Shower items </span> etc.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lesson-nannyBox">
+                    <div class="flipCard">
+                        <div class="flipCardInner">
+                            <div class="flipCardFront">
+                                <img src="images/construction1.jpeg" alt="">
+                                <h2 class="subTitle">Post Construction Management</h2>
+                                <p>Here, we give you janitorial and upholstery solution.</p>
+                                <a class="btn">READ MORE</a>
+                            </div>
+                            <div class="flipCardBack">
+                                <p>Floor maintenance is an expertise area at O-konnect 
+                                when it comes to post construction management. Our Floor technicians 
+                                expertly trained to properly and professionally maintain any surface, 
+                                including hardwood, ceramic, marble epoxy, concrete and more. Just give us
+                                a try today and you will testify.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flipCard">
+                        <div class="flipCardInner">
+                            <div class="flipCardFront">
+                                <img src="images/cleaners1.png" alt="">
+                                <h2 class="subTitle">House Cleaning Services</h2>
+                                <p>Cleanliness they say is next to godliness...</p>
+                                <a class="btn">READ MORE</a>
+                            </div>
+                            <div class="flipCardBack">
+                                <p>O-konnect Facilities has the staffing expertise and understanding 
+                                required to meet all your Housekeeping Service needs. We always commited
+                                to ensure that we give your house or office a sparkling cleaning.
+                                It is just a matter of phone call and we at your door step. Just try us today!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--==================================================================
+        Section 3: Testimonials
+    ======================================================================-->
+
+    <section class="testContainer" id="testimonies">
+        <div class="boxWidth1">
+            <div class="testBox">
+                <div class="titleBox">
+                    <h2 class="title">Testimonials</h2>
+                    <p>Our customers are saying good things about us. They are happy with our services</p>
+                </div>
+                <div class="container">
+                    <div class="card">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+            
+                        <div class="content">
+                            <img src="images/Chuks.jpg" alt="">
+                            <h3>Mr. Chuks</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                            Quidem illum eligendi libero reprehenderit nostrum eos, 
+                            temporibus consequatur.</p>
+                            
+                        </div>
+                    </div>
+            
+                    <div class="card">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+            
+                        <div class="content">
+                            <img src="images/avatar_g2.jpg" alt="">
+                            <h3>Mr. Chuks</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                            Quidem illum eligendi libero reprehenderit nostrum eos, 
+                            temporibus consequatur.</p>
+                        </div>
+                    </div>
+            
+                    <div class="card">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+            
+                        <div class="content">
+                            <img src="images/avatar2.png" alt="">
+                            <h3>Mr. Chuks</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                            Quidem illum eligendi libero reprehenderit nostrum eos, 
+                            temporibus consequatur.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--==================================================================
+        Section 4: Meet Our Team
+    ======================================================================-->
+
+    <section class="teamContainer">
+        <div class="boxWidth2">
+            <div class="titleBox">
+                <h2 class="title">Meet Our Team</h2>
+                <p>Get in touch with our amazing team of experts</p>
+            </div>
+            <div class="teamBox">
+                <div class="teamDetails">
+                    <div class="teamImage">
+                        <img src="images/ceo.jpg" alt="">
+                        <h3>Saviour Okosigha</h3>
+                        <p>Founder/CEO</p>
+                    </div>  
+                    <p>O-Konnect Facility Services</p>
+                </div>
+
+                <div class="teamDetails">
+                    <div class="teamImage">
+                        <img src="images/Chuks.jpg" alt="">
+                        <h3>Mr. Chuks</h3>
+                        <p>Tutor</p>
+                    </div>  
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Quidem illum eligendi</p>
+                </div>
+
+                <div class="teamDetails">
+                    <div class="teamImage">
+                        <img src="images/avatar5.png" alt="">
+                        <h3>Mr. Chuks</h3>
+                        <p>Tutor</p>
+                    </div>  
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Quidem illum eligendi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--==================================================================
+        Footer
+
+        remember to add scroll to top button from w3schools
+    ======================================================================-->
+
+    <footer class="footerContainer" id="contact">
+        <div class="titleBox">
+            <h3 class="title">Contact Us</h3>
+            <p>For further inquries kindly contact in one the following routes.</p>
+        </div>
+
+        <div class="coverBox">
+            <div class="footerBox">
+                
+                <div class="contactBox">
+                    <h3>Contact Info</h3>
+                    <div class="box">
+                        <div class="icon">
+                            <i fa fa-map-marker></i>
+                        </div>
+                        <div class="text">
+                            <h2>Address</h2>
+                            <p>75 Ezza Road, <br> Beside St. Lucke's Chaplaincy, <br>Presco Campus</p>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="icon">
+                            <i fa fa-phone></i>
+                        </div>
+                        <div class="text">
+                            <h2>Phone</h2>
+                            <p>0703-964-7812</p>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="icon">
+                            <i fa fa-envelope-o></i>
+                        </div>
+                        <div class="text">
+                            <h2>Email</h2>
+                            <p>okonnect.f.s@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="googleMap">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.5101004451826!2d8.077187113967547!3d6.327882295420552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x105ca08c53d69011%3A0x9a7513452ed4a0d3!2sSt.%20Luke&#39;s%20Chaplaincy%2C%20Presco%20Campus!5e0!3m2!1sen!2sng!4v1604980753771!5m2!1sen!2sng" 
+                     frameborder="0" 
+                    style="border:0;" allowfullscreen="" 
+                    aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+            
+            <div class="socialBox">
+                <h3>Follow US On</h3>
+
+                <div class="wrapperContainer">
+                    <div class="wrapper">
+                        <div class="button">
+                            <a href="#">
+                                <div class="icon"><i class="fab fa-facebook-f"></i></div>
+                                <span>Facebook</span>
+                            </a>
+                        </div>
+            
+                        <div class="button">
+                            <a href="#">
+                                <div class="icon"><i class="fab fa-twitter"></i></div>
+                                <span>Twitter</span>
+                            </a>
+                        </div>
+            
+                        <div class="button">
+                            <a href="#">
+                                <div class="icon"><i class="fab fa-instagram"></i></div>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+                        
+                        <div class="button">
+                            <a href="#">
+                                <div class="icon"><i class="fab fa-youtube"></i></div>
+                                <span>YouTube</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+       
+        <!--======================= COPYWRITE ===========================-->
+        <div class="copyWrite">
+            <marquee behavior="" direction="left">
+                <p>Copywrite <span class="copy">©</span> 2020 O-Konnect Facility Services. 
+                Powered by <span class="company">Chusco Technologies 08030720015</span></p>
+            </marquee>
+        </div>
+    </footer>
+
+
+
+    <!--External JS Scripts linked here-->
+    <script src="js/mainScript.js"></script>
+    <script src="js/animations.js"></script>
+
+</body>
+</html>

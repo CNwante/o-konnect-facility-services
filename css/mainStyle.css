@@ -1,0 +1,446 @@
+/* ========================================================================================
+Important Notes: The Followings Styles are the ANIMATIONS CSS file
+
+1: The Hamburger Icon Styles
+2: The Mobile Navigation Animation Styles
+3: The Wavy Header Animation Styles
+===========================================================================================*/
+
+/*======= General Styling Starts Here ========*/
+* {
+    /* remember to design hamburger menu that the centre bar expands on hover */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --pageWidth: 95%;
+    --boxWidth: 97%;
+    font-family: 'Titillium Web', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background:#bbb9b9;
+    color: #fff;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+p, .btn {
+    line-height: 1.5;
+    word-spacing: 2px;
+    letter-spacing: 1.2px;
+    font-size: 18px;
+}
+
+.titleBox {
+    padding: 0.8em 0.4em;
+    text-align: center;
+}
+
+
+.title, .subTitle {
+    margin: 0.2em 0;
+    font-family: "Aldrich", sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    text-transform: uppercase;
+    color: #15ffdc;
+}
+
+.subTitle {
+    font-size: 17px;
+}
+
+.boxWidth1{
+    background: #031c2a;
+    width: var(--boxWidth);
+    margin: 0 auto;
+    border-radius: 6px;
+    padding: 2.5em 0;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+}
+
+.boxWidth2{
+    background: #035e50;
+    width: var(--boxWidth);
+    margin: 0 auto;
+    border-radius: 6px;
+    padding: 2em 0;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+}
+/*======= General Styling Ends Here ========*/
+
+/*======= Styles For the Header Starts Here ========*/
+.heroContainer {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6),
+    0%, rgba(0, 0, 0, 0.6) 100%), url("images/main.jpeg")
+    center no-repeat;
+    background-size: 100% 100%;
+}
+
+.headerContainer {
+    --text: #f4f4f4;
+    --text-inverse: #f4f4f4;
+    --background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    transition: background 250ms ease-in;
+    background: var(--background);
+    color: var(--text);
+    /* width: 85%;
+    margin: 0 auto; */
+    /* border: 2px solid red; */
+    height: 50px;
+}
+
+.menuBox {
+    width: var(--pageWidth);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6em 0;
+    height: inherit;
+}
+
+.logo {
+    width: 100px;
+    height: 50px;
+    margin: 0;
+    padding-bottom: 0;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+
+}
+
+.logo img {
+    border-radius: 10px;
+}
+
+.logoText {
+    font-family: "Aldrich", sans-serif;
+    font-size: 25px;
+}
+
+.navUl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.navList  {
+    /* color: #f4f4f4; */
+    margin: 0em;
+    padding: 8px 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+    letter-spacing: 1.5px;
+}
+
+.nav-scrolled {
+    --text: #f4f4f4;
+    --text-inverse: #f4f4f4;
+    --background: #f4f4f4;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+}
+
+.navList a {
+    --spacing: 1em;
+    color: inherit;
+    padding: calc(var(--spacing) / 2) var(--spacing);
+    position: relative;
+    text-transform: uppercase;
+    cursor: pointer;
+   
+}
+
+.navList a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: var(--spacing);
+    right: var(--spacing);
+    height: 2px;
+    background: currentColor;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    transition: -webkit-transform 150ms ease-in-out;
+    transition: transform 150ms ease-in-out;
+    transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+}
+
+.navList a:hover::after {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+}
+  /*------- WElcome Note -------*/
+.mainContainer {
+    width: var(--pageWidth);
+    margin: 0 auto;
+    border-width: 0 0 0 3px;
+    border-style: solid;
+    border-left-color: #1abea5;
+    padding-bottom: 0;
+    transform: translateY(20vh);
+}
+
+.mainContent {
+    max-width: 500px;
+    padding:  0;
+    margin-left: 0.8em;
+}
+
+.mainContent span {
+    font-size: 18px;
+}
+
+.mainContent h1 {
+    margin: 0.2em 0;
+    font-family: "Aldrich", sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    color: #15ffdc;
+    /* #1abea5 */
+}
+
+.btn {
+    background-color: #1786c7;
+    color: #fafafa;
+    font-size: 12px;
+    border-radius: 40px;
+    display: inline-block;
+    margin-top: 2em;
+    padding: 1rem 2em;
+    text-transform: uppercase;
+    transition: background-color 650ms;
+}
+
+.btn:hover {
+    background-color: #031c2a;
+    transform-origin: left;
+}
+
+/*======= Styles For the Header Ends Here ========*/
+
+
+
+/* .home-intro {
+    background: #123 url(//unsplash.it/900);
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: white;
+    text-align: center;
+} */
+
+/*--==================================================================
+    Section 2: About Us
+======================================================================*/
+
+.aboutContainer {
+    margin: 2em 0;
+}
+
+.aboutContent {
+    width: var(--pageWidth);
+    margin: 0 auto;
+    padding: 2em 0;  
+}
+
+.aboutText {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 1.5em;
+    
+}
+
+.aboutText .title {
+    text-align: center;
+}
+
+.aboutText .title,
+.aboutText p {
+    padding-left: 0.6em;
+}
+
+.aboutFocus {
+    margin-left: 1.8em;
+    line-height: 1.5;
+    word-spacing: 2px;
+    font-size: 25px;
+    letter-spacing: 1.2px;
+    color: #15ffdc;
+}
+
+.aboutFocus li span {
+    font-size: 18px;
+    color: #fff;  
+}
+
+.aboutFocus .subTitle {
+    text-align: center;
+}
+
+
+/*--==================================================================
+    Section 3: Our Services 
+
+    Find the styles in animations.css file
+======================================================================*/
+
+
+/*====================================================================
+    Meet Our Team
+====================================================================== */
+
+.teamContainer .boxWidth2 {
+    background: rgb(29, 28, 28);
+}
+
+.teamBox {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding: 0 0.5em;
+}
+
+.teamDetails { 
+    max-width: 300px;
+    margin: 2em 0;
+    padding: 10px;
+    text-align: center;
+    background: #0f0f0f;
+    border: 2.5px solid transparent;
+    border-radius: 10px;
+    border-image: url(images/border.png) 30 stretch;
+}
+
+.teamImage{
+    margin-bottom: 1em;
+}
+
+.teamImage img {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+}
+
+/*====================================================================
+    Footer
+====================================================================== */
+.footerContainer {
+    background: #000000;
+    margin-top: 2em;
+    padding-top: 2.5em;
+}
+
+.footerTitle {
+    text-align: center;
+    padding: 0.8em 0;
+}
+
+.coverBox {
+    width: var(--boxWidth);
+    margin: 0 auto;
+    background: #0f0f0f;
+    padding: 2em 0;
+    border-radius: 8px;
+}
+
+.footerBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contactBox {
+    width: 250px;
+    text-align: center;
+}
+
+.contactBox h3,
+.socialBox h3 {
+    font-weight: 200;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+.contactBox h2,
+.socialBox h2 {
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.box {
+    padding: 1.5em 0;
+}
+
+.text h2 {
+    font-weight: 200;
+    font-size: 22px;
+    color: #15ffdc;
+}
+
+.text p,
+.iconText p {
+    font-size: 18px;
+}
+/* .socialBox .iconText {
+    padding: 1.5em 0;
+} */
+
+.googleMap iframe {
+    width: 80vw;
+    height: 300px;
+}
+
+
+
+/*======================= COPYWRITE ===========================*/
+.copyWrite {
+    text-align: center;
+    padding: 1em 4px;
+}
+
+.copyWrite p {
+    line-height: 1.7;
+
+}
+
+.copy {
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.copyWrite .company {
+    color: #44fadf;
+}
+
+
+
+
+
+
+
+
+
+
