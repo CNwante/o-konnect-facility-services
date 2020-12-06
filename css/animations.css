@@ -1,0 +1,558 @@
+
+/*========================================================
+    Nav Bar Animation for small screen
+==========================================================*/
+
+/*========= Hamburger Icon Styles ==========*/
+.hamburger {
+    position: absolute;
+    top: 15%;
+    right: 3%;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 3px;
+    background-color: #1abea5;
+    transition: 0.4s;
+    margin: 6px 0px;
+    border-radius: 12px;
+}
+
+.change .bar1 {
+    transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+.change .bar2 { opacity: 0; }
+
+.change .bar3 {
+    transform: rotate(45deg) translate(-6px, -6px);
+}
+
+/*========= Mobile Navigation Animation Styles ==========*/
+.navBox {
+    position: fixed;
+    background: #031c2a;
+    /* #014a75 */
+    height: 50%;
+    width: 100%;
+    margin-top: -1.7em;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    clip-path: circle(100px at 90% -45%);
+    -webkit-clip-path: circle(100px at 90% -45%);
+    transition: all 2s ease-out;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.navBox.open {
+    clip-path: circle(1000px at 90% -45%);
+    -webkit-clip-path: circle(1000px at 90% -45%);
+    pointer-events: all;
+}
+
+.navBox .navList {
+    opacity: 0;
+}
+
+.navBox .navList:nth-child(1) {
+    transition: all 0.5s ease-out 0.2s;
+}
+.navBox .navList:nth-child(2) {
+    transition: all 0.5s ease-out 0.5s;
+}
+.navBox .navList:nth-child(3) {
+    transition: all 0.5s ease-out 0.8s;
+}
+.navBox .navList:nth-child(4) {
+    transition: all 0.5s ease-out 1.1s;
+}
+.navBox .navList:nth-child(5) {
+    transition: all 0.5s ease-out 1.4s;
+}
+
+.navList.fade {
+    opacity: 1;
+}
+
+/*========================================================
+    Wavy Header Animation Styles
+==========================================================*/
+.header {
+    background-color: black;
+}
+
+.canvasWrap {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 15px;
+}
+
+canvas {
+    display: block;
+}
+
+/*============ Image Slider Style Starts Here ============*/
+.slideshow { 
+    margin: 0 auto; 
+    position: relative; 
+    max-width: 600px; 
+    height: 300px; 
+
+    /* box-shadow: 0 0 20px rgba(0,0,0,0.5);  */
+    border-radius: 10px;
+}
+
+.slideshow > .slide { 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    right: 10px; 
+    bottom: 10px; 
+
+}
+
+.slideshow > .slide img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.imageText {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 0.5em 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.imageText h4 {
+    font-size: 20px;
+    font-weight: 200;
+    color: #15ffdc;
+}
+/*============ Image Slider Style Ends Here ============*/
+  
+/*--==================================================================
+    Section 2: Our Services 
+======================================================================*/
+
+.servicesContent {
+    width: var(--pageWidth);
+    margin: 0 auto;
+    padding: 2em 0;
+    /* text-align: center; */
+}
+
+/* .servicesContent img {
+    height: 55%;
+} */
+
+.servicesContent p {
+    line-height: 1.5;
+}
+
+
+
+/*=========== Flip Card animation starts here =========*/
+.lesson-nannyBox {
+    display:  flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background: #031c2a; */
+}
+
+
+.eventContent {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.eventContent {
+    margin: 0.2em auto;
+    /* background: #1a1a1b; */
+    /* #3a3b3d */
+   
+}
+
+.flipCard {
+    background-color: transparent;
+    -webkit-backgound-color: transparent;
+    width: 350px;
+    height: 400px;
+    margin: 1.5em 0;
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+}
+
+.flipCardInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    -webkit-transform: preserve-3d;
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+}
+
+.flipCard:hover .flipCardInner {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+
+.flipCardFront, 
+.flipCardBack,
+.flipEventBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.flipCardFront {
+    background-color: #031c2a;
+    border-radius: 10px;
+}
+
+.flipCardFront img {
+    width: inherit;
+    height: 200px;
+    border-radius: inherit;
+}
+
+.flipCardFront .btn {
+    margin-top: 8px;
+}
+
+.flipCardFront p {
+    padding: 0 4px;
+}
+
+.flipCardBack {
+    background-color: #031c2a;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    border-radius: 10px;
+    padding: 1em;
+    z-index: 1;
+}
+
+
+/*==== Overiding Flip Card for Events ====*/
+.flipEvent:hover .flipCardInner {
+    transform: rotateX(180deg);
+}
+
+.flipEventBack {
+    transform: rotateX(180deg);
+    background-color: #031c2a;
+    border-radius: 10px;
+    padding: 1em;
+    z-index: 1;
+}
+/*=========== Flip Card animation ends here =========*/
+
+/*==================================================================
+    Section 3: Testimonials
+======================================================================*/
+.testContainer {
+    margin: 2em 0;
+}
+
+.testBox {
+    padding: 1em 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 0.5em;
+}
+
+.container .card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: #012521;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5em 0;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+
+.container:hover .card {
+    opacity: 0.3;  
+}
+
+
+.container .card:hover {
+    opacity: 1;   
+}
+
+.container .card::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    width: 50%;
+    /* background: rgba(255,255,255,0.1); */
+    background: #19443e;
+    pointer-events: none;
+}
+
+
+.container .card .content {
+    padding: 1em;
+    text-align: center;   
+}
+
+.container .card .content img {
+    position: absolute;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0.1;
+    transition: 0.5s;
+}
+
+.container .card:hover .content img {
+    opacity: 1;
+    transform: translateY(-100px);
+}
+
+.container .card .content h3 {
+    position: relative;
+    font-size: 1.5em;
+    color: #fff;
+    z-index: 2;
+    opacity: 0.5;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    text-align: right;
+    margin: 0 -0.3em 0.4em 0;
+}
+
+.container .card .content p {
+    position: relative;
+    font-size: 1em;
+    color: #fff;
+    z-index: 2;
+    opacity: 0.5;
+    font-weight: 300;
+    transition: 0.5s;
+    font-style: italic;
+}
+
+.container .card:hover .content h3,
+.container .card:hover .content p {
+    opacity: 1;
+}
+
+/* .container .card .content a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background: #fff;
+    color: #0c002b;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+} */
+
+.container .card span {
+    transition: 0.5s;
+    opacity: 0;
+}
+
+
+.container .card:hover span {
+    opacity: 1;
+}
+
+.container .card span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #15ffdc);
+    animation: animate1 2s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {transform: translateX(-100%);}
+    100% {transform: translateX(100%);}
+}
+
+
+.container .card span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #15ffdc);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate2 {
+    0% {transform: translateY(-100%);}
+    100% {transform: translateY(100%);}
+}
+
+
+.container .card span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to left, transparent, #15ffdc);
+    animation: animate3 2s linear infinite;
+}
+
+@keyframes animate3 {
+    0% {transform: translateX(100%);}
+    100% {transform: translateX(-100%);}
+}
+
+
+
+.container .card span:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px ;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #15ffdc);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate4 {
+    0% {transform: translateY(100%);}
+    100% {transform: translateY(-100%);}
+}
+
+
+/*===================================================================
+    FOOTER
+=====================================================================*/
+.footerBox {
+    padding: 0 0.5em;
+}
+
+.socialBox h3 {
+    padding: 1.5em 0 0.7em 0;
+    text-align: center;
+}
+
+.wrapperContainer {
+    margin: 0 auto;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+}
+  
+.wrapper .button {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    /* float: left; */
+    margin: 0 5px;
+    overflow: hidden;
+    background: #fff;
+    color: #035e50;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button a {
+    color: #035e50;
+}
+
+.wrapper .button .icon {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:nth-child(1):hover .icon {
+    background: #4267B2;
+}
+
+.wrapper .button:nth-child(2):hover .icon {
+    background: #1DA1F2;
+}
+  .wrapper .button:nth-child(3):hover .icon {
+    background: #E1306C;
+}
+  
+.wrapper .button:nth-child(4):hover .icon {
+    background: #ff0000;
+}
+
+.wrapper .button .icon i{
+    font-size: 25px;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+}
+  .wrapper .button:hover .icon i {
+    color: #fff;
+}
+
+.wrapper .button span{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 60px;
+    margin-left: 10px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:nth-child(1) span {
+    color: #4267B2;
+}
+
+.wrapper .button:nth-child(2) span {
+    color: #1DA1F2;
+}
+
+.wrapper .button:nth-child(3) span {
+    color: #E1306C;
+}
+
+.wrapper .button:nth-child(4) span {
+    color: #ff0000;
+}
+  
