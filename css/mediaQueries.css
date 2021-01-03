@@ -24,7 +24,7 @@
 
     p {
         font-size: 19px;
-        font-weight: 500;
+        font-weight: 600;
     }
     /*======= General Styling Ends Here ========*/
 
@@ -90,10 +90,6 @@
     /*--==================================================================
     Section 2: About Us
     ======================================================================*/
-    /* .aboutTitle {
-        font-weight: 600;
-    } */
-
     .aboutText .title,
     .aboutText p {
         padding-left: unset;
@@ -103,8 +99,6 @@
     .aboutFocus {
         width: var(--pageWidth);
         margin: 0 auto;
-        /* display: grid;
-        place-items: center; */
     }
     
     /*--==================================================================
@@ -140,7 +134,6 @@
         .aboutText p {
             padding-right: 0.8em;
             line-height: 1.5;
-            /* text-align: justify; */
         }
 
     
@@ -152,6 +145,18 @@
             place-items: center;
             }
         }
+    }
+
+    /*==================================================================
+    Section 3: Testimonials
+    ======================================================================*/
+    .container .card .content h3 {
+        font-size: 1.5em;
+    }
+
+    .container .card .content p {
+        font-size: 1.2em;
+        font-weight: 400;
     }
 
    /*--==================================================================
@@ -166,7 +171,7 @@
     }
 
     .googleMap iframe {
-        width: 65vw;
+        width: 55vw;
         height: 400px;
     }
     
